@@ -39,3 +39,8 @@ const port = process.env.PORT;
 app.listen(port, () => {
   console.log(`Node server is running on port ${port}`);
 });
+
+app.use(cors({
+  origin: ['http://localhost:3000', 'https://software-project-1.onrender.com'], // Add your frontend URLs
+  credentials: true
+}));
